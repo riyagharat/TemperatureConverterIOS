@@ -55,12 +55,21 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRx-s6-n0I">
-                                <rect key="frame" x="160" y="157" width="55" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sCk-Kg-3hc">
+                                <rect key="frame" x="160" y="338.5" width="55" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-fR-DJ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRx-s6-n0I">
+                                <rect key="frame" x="160" y="179" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Convert"/>
                                 <connections>
                                     <action selector="convertWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OR1-qd-LVM"/>
@@ -69,10 +78,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jRx-s6-n0I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9g-gk-sDy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K6D-x8-uXF" secondAttribute="trailing" constant="20" id="E9Y-5Z-fiq"/>
                             <constraint firstItem="K6D-x8-uXF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="L35-Qj-USD"/>
                             <constraint firstItem="TZU-vV-YJj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Nvf-Sp-6y3"/>
+                            <constraint firstItem="sCk-Kg-3hc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="VxH-gw-FGz"/>
                             <constraint firstItem="TZU-vV-YJj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="YvF-Ki-EOK"/>
                             <constraint firstItem="K6D-x8-uXF" firstAttribute="top" secondItem="TZU-vV-YJj" secondAttribute="bottom" constant="20" id="eV8-VD-Bo1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TZU-vV-YJj" secondAttribute="trailing" constant="20" id="fxj-pE-cbT"/>
