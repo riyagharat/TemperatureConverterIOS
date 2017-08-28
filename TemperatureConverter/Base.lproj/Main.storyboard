@@ -35,7 +35,7 @@
                                         <rect key="frame" x="91" y="0.0" width="212" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -51,22 +51,25 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixb-xd-hcN">
                                         <rect key="frame" x="91" y="0.0" width="212" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="212" id="bDF-Kw-usI"/>
+                                            <constraint firstAttribute="width" constant="212" id="exn-ju-rqv"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRx-s6-n0I">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRx-s6-n0I">
                                 <rect key="frame" x="160" y="157" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OR1-qd-LVM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jRx-s6-n0I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9g-gk-sDy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K6D-x8-uXF" secondAttribute="trailing" constant="20" id="E9Y-5Z-fiq"/>
                             <constraint firstItem="K6D-x8-uXF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="L35-Qj-USD"/>
                             <constraint firstItem="TZU-vV-YJj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Nvf-Sp-6y3"/>
@@ -75,6 +78,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TZU-vV-YJj" secondAttribute="trailing" constant="20" id="fxj-pE-cbT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfCe" destination="ixb-xd-hcN" id="OG9-8u-ZAi"/>
+                        <outlet property="tfFa" destination="G91-yq-KWC" id="qVe-O8-QFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

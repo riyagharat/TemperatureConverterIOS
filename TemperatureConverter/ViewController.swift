@@ -14,9 +14,21 @@ class ViewController: UIViewController {
     @IBOutlet var tfCe:UITextField!
     
     @IBAction func convert(sender: AnyObject){
+        var tempInC: Float
         
-        
-        
+        if let inText = tfFa.text, !inText.isEmpty {
+            if let tempInF = Float(inText) {
+                tempInC = (tempInF-32)*5/9
+                tfCe.text = String(tempInC)
+            }else{
+                // the input is not numeric
+                tfCe.text = "????"
+            }
+        }else {
+            // No input 
+            tfCe.text = "???"
+        }
+        tfFa.resignFirstResponder()
     }
 
     override func viewDidLoad() {
