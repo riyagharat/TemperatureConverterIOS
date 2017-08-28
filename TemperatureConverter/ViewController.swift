@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var tfFa:UITextField!
+    @IBOutlet var tfCe:UITextField!
+    
+    @IBAction func convert(sender: AnyObject){
+        
+        
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
